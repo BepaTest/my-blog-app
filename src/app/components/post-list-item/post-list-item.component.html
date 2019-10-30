@@ -1,0 +1,12 @@
+<div [ngStyle]="{color: getColor(),
+                'background-color': getBackgroundColor()}">
+    <div class="row">
+        <div class="col">
+            <h2 class="font-weight-bold">{{post.title}} </h2>
+        </div>
+        <div class="col text-right font-italic">{{post.created_at | date : 'short' }}</div>
+    </div>
+    <p>{{post.content}}</p>
+    <button class="btn btn-success" (click)="aimer()">Love it!!</button>
+    <button class="btn btn-danger" (click)="pasAimer()">Don't love it!</button>
+</div>
